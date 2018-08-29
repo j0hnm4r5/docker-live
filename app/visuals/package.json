@@ -1,0 +1,16 @@
+{
+  "name": "sandbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-var parcel src/index.html --port $VISUALS_PORT --hmr-port $VISUALS_HMR_PORT"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cross-var": "^1.1.0",
+    "parcel-bundler": "^1.9.7",
+    "sockette": "^2.0.0"
+  }
+}

@@ -1,0 +1,28 @@
+version: "3"
+
+services:
+
+  visuals:
+    build:
+      context: ./app/visuals
+    ports:
+      - $VISUALS_PORT:$VISUALS_PORT
+      - $VISUALS_HMR_PORT:$VISUALS_HMR_PORT
+    env_file:
+      .env
+    volumes:
+      - ./app/visuals:/app/
+      - ./.env:/app/.env
+      - /app/node_modules/
+    
+  communicator:
+    build:
+      context: ./app/communicator
+    ports:
+      - $COMMUNICATOR_WS_PORT:$COMMUNICATOR_WS_PORT
+    env_file:
+      .env
+    volumes:
+      - ./app/communicator:/app/
+      - ./.env:/app/.env
+      - /app/node_modules/
